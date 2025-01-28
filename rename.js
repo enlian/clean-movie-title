@@ -4,7 +4,7 @@ const path = require('path');
 function cleanMovieTitle(filename) {
     const invalidPatterns = [
         /\b(The|A|An)\.(?=[A-Z])/gi, // 替换 "The." -> "The "
-        /[\s._-]+(1080p|720p|LAMA|NaNi|10bit|2160p|4K|8K|HD|WEBRip|WEB-DL|BluRay|BDRip|H\.264|H\.265|x264|x265|HDR|SDR|HEVC|DDP[\.\d]*|AAC|DTS|DTS-HD|TrueHD|Atmos|MA|AC3|Dual|CHS|ENG|GERMAN|HINDI|MULTi|JAPANESE|KOREAN|RARBG|YTS|AMZN|NF|AppleTV|B4E|ETHEL|TUDHER|BDE4|WEB|BD|PROPER|REPACK|IMAX|UNCUT|EXTENDED|Remux|HDTV|CAM|TS|SCR|DVDSCR|DVDRip|TC|HDTS|HDTC)(?=[\s._-]|$)/gi, '' // 删除无意义标记
+        /[\s._-]+(1080p|720p|RARBG|JPN|x265|LAMA|NaNi|10bit|2160p|4K|8K|HD|WEBRip|WEB-DL|BluRay|BDRip|H\.264|H\.265|x264|x265|HDR|SDR|HEVC|DDP[\.\d]*|AAC|DTS|DTS-HD|TrueHD|Atmos|MA|AC3|Dual|CHS|ENG|GERMAN|HINDI|MULTi|JAPANESE|KOREAN|RARBG|YTS|AMZN|NF|AppleTV|B4E|ETHEL|TUDHER|BDE4|WEB|BD|PROPER|REPACK|IMAX|UNCUT|EXTENDED|Remux|HDTV|CAM|TS|SCR|DVDSCR|DVDRip|TC|HDTS|HDTC)(?=[\s._-]|$)/gi, '' // 删除无意义标记
     ];
 
     const removeWords = [
